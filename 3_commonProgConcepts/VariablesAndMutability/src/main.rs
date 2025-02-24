@@ -10,12 +10,35 @@ fn main() {
 
     //shadowing
     let a = 5;
-    let a = a + 1;
+    let a = a + 1; //the second variable with the same name overshadows the variable with the same name writtern first beofore it
     {
-        let a = a + 2;
+        let a = a * 2;
         println!("the value of a in the inner scope is: {a}");
     }
     println!("the value of a is: {a}");
+    
+    //shadowinttf is different from using mut eyword cus we will get compile time error if uwe try
+    //to update the varibale a=a+1 in the next line without using the let keyword
+    /*
+    
+    The other difference between mut and shadowing is that because we’re effectively 
+    creating a new variable when we use the let keyword again,
+     we can change the type of the value but reuse the same name
+    
+     */
+    
+    let spaces = "  ";
+    let spaces = spaces.len(); //this is what is possible using shadowing change of data types
+    
+    
+    /*
+    let mut spaces = " ";
+    spaces = spaces.len();   
+    
+    
+    //will give error
+    
+     */
 }
 
 /* variables in RUST are immutable by defautl
