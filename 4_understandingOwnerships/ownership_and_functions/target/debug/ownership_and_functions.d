@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\4_understandingOwnerships\ownership_and_functions\target\debug\ownership_and_functions.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\4_understandingOwnerships\ownership_and_functions\src\main.rs
