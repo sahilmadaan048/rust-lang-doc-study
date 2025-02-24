@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\4_understandingOwnerships\the_slice_type\target\debug\the_slice_type.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\4_understandingOwnerships\the_slice_type\src\main.rs
