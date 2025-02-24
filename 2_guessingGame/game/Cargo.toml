@@ -1,0 +1,9 @@
+[package]
+name = "game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cmp = "0.1.1"
+io = "0.0.2"
+rand = "0.9.0"
