@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\5_usingStructs\an_example_progran_using_rust\target\debug\an_example_progran_using_rust.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\5_usingStructs\an_example_progran_using_rust\src\main.rs
