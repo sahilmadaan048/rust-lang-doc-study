@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\5_usingStructs\method_syntax\target\debug\method_syntax.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\5_usingStructs\method_syntax\src\main.rs
