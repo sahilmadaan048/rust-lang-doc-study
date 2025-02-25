@@ -1,6 +1,14 @@
 /*
 
+Methods with more paramters
 
+
+
+When we run this code with the main function
+in Listing 5-14, we’ll get our desired output.
+ Methods can take multiple parameters that we add
+ to the signature after the self parameter, and those
+  parameters work just like parameters in functions.
 */
 
 #[derive(Debug)]
@@ -14,6 +22,8 @@ impl Rectangle {
         self.width * self.height
     }
     fn can_hold(&self, other: &Rectangle) -> bool {
+        //immutabke borrow of the a=other rectangle also as a paramter
+
         self.width > other.width && self.height > other.height
     }
 }

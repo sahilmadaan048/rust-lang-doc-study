@@ -93,3 +93,20 @@ fn main() {
 }
 
 // ----this syntax wont give error
+
+/*
+when functions and the field are given same names
+most of the times it's to return some some value in the field only
+
+these type of methids/ functions are called getters
+these helkp us keep the field values proivate but enable read-only access to the end user
+through these mnethods
+
+ */
+
+/*
+
+wjeres thr -> operator
+
+see the arrayOperator image in the main folder inside src
+ */
