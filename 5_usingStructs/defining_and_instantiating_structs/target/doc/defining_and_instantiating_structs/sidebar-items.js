@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["build_user","build_user2","build_user3","build_user4","build_user5","main","tuple_struct"],"struct":["Color","Point","User"]};
