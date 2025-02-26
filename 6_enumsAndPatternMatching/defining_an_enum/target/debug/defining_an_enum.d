@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\6_enumsAndPatternMatching\defining_an_enum\target\debug\defining_an_enum.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\6_enumsAndPatternMatching\defining_an_enum\src\main.rs
