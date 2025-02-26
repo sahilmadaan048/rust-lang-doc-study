@@ -219,3 +219,61 @@ matches are exhaistive in RUST
 
 */
 
+
+/*
+    Catch all patterns and the _ placeholder
+
+*/
+
+let dice_roll = 9;
+match dice_roll {
+    3 => add_fancy_hat(),
+    7 => remove_fancy_hat(),
+    other => move_player(other),  //here it is passing the vartable to that function
+    //catch all arn is must in these cases beacuse matching in RUST Is exhaustive
+
+}
+
+
+
+fn add_fancy_hat() {}
+fn remove_fancy_hat() {}
+fn move_player(num_spaces: u8) {}   //here it borrows tha value of the variable itself
+
+
+// This code compiles, even though we haven’t listed all the possible values a u8 can have, because the last pattern will match all values not specifically listed
+
+
+let dice_roll = 9;
+match dice_roll {
+    3 => add_fancy_hat(),
+    7 => remove_fancy_hat(),
+    // ust also has a pattern we can use when we want a catch-all but don’t want to use the value in the catch-all pattern: _ is a special pattern that matches any value and does not bind to that value
+    _ => reroll(),
+}
+
+fn add_fancy_hat() {}
+fn remove_fancy_hat() {}
+fn reroll() {}
+
+
+// _ is called the catch-all pattern
+
+
+
+
+// Finally, we’ll change the rules of the game one more time so that 
+// nothing else happens on your turn if you roll anything other than a 3 or a 7.
+// We can express that by using the unit value (the empty tuple type we mentioned
+// in “The Tuple Type” section) as the code that goes with the _ arm:
+
+let dice_roll = 9;
+match dice_roll {
+    3 => add_fancy_hat(),
+    7 => remove_fancy_hat(),
+    _ => (),
+}
+
+fn add_fancy_hat() {}
+fn remove_fancy_hat() {}
+
