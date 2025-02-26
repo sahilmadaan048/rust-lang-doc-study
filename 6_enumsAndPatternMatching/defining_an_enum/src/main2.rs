@@ -1,5 +1,10 @@
 //The Option neum and its Advantanges Over NUll values
 
+Option<T> {
+    Some(T),
+    None,
+}
+
 fn main() {
     let some_number: Option<i32> = Option::Some(5);
 
@@ -9,7 +14,8 @@ fn main() {
 
     let x: i8 = 5;
     let y = Some(5);
-    println!("{}", x + y);
+     // For example, this code won’t compile, because it’s trying to add an i8 to an Option<i8>:
+    // println!("{}", x + y);
     println!("hello world");
 }
 
