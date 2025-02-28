@@ -12,7 +12,7 @@ it also has a concept of workspaces for larger projects which allows you to
 store multiple packages inside the workspace 
 
 main.rs is the crate root, that is the commpiler starts at when buillding a crate it also makes 
-up the root module of your crate 
+up the root module of your crate !
 
 similar convention is there for library crates
 
@@ -28,3 +28,6 @@ RULES AROUND CRATES
 
 to create more binary crates, create a folder named bin , here we can define the other files
 
+cargo is actually a package that contains the binary crate for the command line tool that we have been using
+
+to build our code. The cargo package also contains a library crate that the binary crate depends on 
