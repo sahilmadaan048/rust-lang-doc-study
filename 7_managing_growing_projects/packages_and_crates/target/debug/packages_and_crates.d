@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\7_managing_growing_projects\packages_and_crates\target\debug\packages_and_crates.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\7_managing_growing_projects\packages_and_crates\src\main.rs
