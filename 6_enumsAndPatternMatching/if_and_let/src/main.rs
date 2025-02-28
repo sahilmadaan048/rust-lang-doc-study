@@ -134,3 +134,9 @@ fn describe_state_quarter2(state: UsState) -> Option<String> {
     // None
     // }
 }
+
+/*
+   see the letElse image to learn about that
+   and also the summary is there
+
+*/
