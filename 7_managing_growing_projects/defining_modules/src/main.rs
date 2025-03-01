@@ -7,13 +7,12 @@
 //     ├── garden.rs
 //     └── main.rs
 
-
 /*
 what we will be learning ?
 
 modules and paths to name items
 use keyword to bring path into scope
-pub keyword to make items public 
+pub keyword to make items public
 as keyword
 external paxkages
 glob operator
