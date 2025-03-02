@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\8_commonCollections\exercises\fisrt\target\debug\fisrt.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\8_commonCollections\exercises\fisrt\src\main.rs
