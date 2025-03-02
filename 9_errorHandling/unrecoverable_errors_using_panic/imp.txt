@@ -1,0 +1,25 @@
+The environment variable to enable backtraces in Rust is:
+
+```sh
+RUST_BACKTRACE=1
+```
+
+### Usage:
+Run your Rust program with backtrace enabled in the terminal:
+
+```sh
+RUST_BACKTRACE=1 cargo run
+```
+
+or for a compiled binary:
+
+```sh
+RUST_BACKTRACE=1 ./your_binary
+```
+
+### Levels:
+- `RUST_BACKTRACE=0` (default): No backtrace.
+- `RUST_BACKTRACE=1`: Show a short backtrace.
+- `RUST_BACKTRACE=full`: Show a full, detailed backtrace.
+
+This helps debug crashes and panics by displaying the call stack. 🚀
