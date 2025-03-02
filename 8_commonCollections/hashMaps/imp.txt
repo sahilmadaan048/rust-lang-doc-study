@@ -1,0 +1,4 @@
+imp/imp0.https://en.wikipedia.org/wiki/SipHash
+
+to learn about hasing function called
+
