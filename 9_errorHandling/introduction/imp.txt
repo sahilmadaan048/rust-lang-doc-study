@@ -1,0 +1,65 @@
+In Rust, errors are classified into **recoverable** and **unrecoverable** errors.
+
+### **Examples of Recoverable and Unrecoverable Errors in Rust**
+
+#### ✅ **Recoverable Error (Handled using `Result<T, E>`)**
+Recoverable errors are those that a program can handle and continue execution, such as file not found, invalid input, or network failure.
+
+```rust
+use std::fs::File;
+
+fn main() {
+    let file = File::open("non_existent.txt");
+
+    match file {
+        Ok(f) => println!("File opened successfully: {:?}", f),
+        Err(e) => println!("Failed to open file: {}", e), // Recoverable error
+    }
+}
+```
+✅ **Explanation:** Here, `File::open()` returns a `Result<T, E>`, and we handle the error using pattern matching. The program can decide how to proceed if the file is missing (e.g., prompt the user to create a new file).
+
+---
+
+#### ❌ **Unrecoverable Error (Handled using `panic!`)**
+Unrecoverable errors occur when something fundamentally goes wrong, making it unsafe to continue execution, such as accessing an out-of-bounds index or integer overflow in debug mode.
+
+```rust
+fn main() {
+    let v = vec![1, 2, 3];
+
+    println!("{}", v[5]); // This causes a panic: index out of bounds
+}
+```
+✅ **Explanation:** Rust panics when accessing an out-of-bounds index, preventing undefined behavior. In C++, this might cause memory corruption.
+
+---
+
+### **Why Rust's Error Handling is More Robust than C++**
+
+1. **No Unchecked Exceptions**
+   - Rust does not have exceptions like C++. Instead, it enforces explicit error handling with `Result<T, E>` or `panic!()`.
+   - In C++, exceptions can be thrown anywhere and might not be caught, leading to unexpected crashes.
+
+2. **Compile-Time Safety**
+   - Rust forces you to handle errors at compile time, unlike C++, where errors might be ignored (e.g., forgetting to check return values).
+   - Example: If a function returns `Result<T, E>`, Rust will give a compiler warning if you ignore it.
+
+3. **Memory Safety Guarantees**
+   - Rust prevents **use-after-free**, **buffer overflows**, and **null pointer dereferences**, which are common in C++ and can lead to undefined behavior.
+   - In C++, an error like accessing a dangling pointer may corrupt memory instead of safely terminating.
+
+4. **Explicit Control Over Error Handling**
+   - In Rust, error propagation is explicit using the `?` operator:
+   ```rust
+   fn read_file() -> std::io::Result<String> {
+       std::fs::read_to_string("file.txt")
+   }
+   ```
+   - In C++, exceptions might be silently thrown and need runtime handling.
+
+5. **No Implicit Exception Propagation**
+   - In Rust, functions must return errors explicitly, while in C++, exceptions can propagate unexpectedly.
+   - This makes Rust code easier to reason about and debug.
+
+In short, **Rust enforces safer error handling at compile time, prevents undefined behavior, and avoids hidden exceptions**, making it more robust than C++. 🚀
