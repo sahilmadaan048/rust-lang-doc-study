@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\8_commonCollections\exercises\seconf\target\debug\seconf.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\8_commonCollections\exercises\seconf\src\main.rs
