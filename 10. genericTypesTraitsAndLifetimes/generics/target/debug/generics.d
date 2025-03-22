@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\10.\ genericTypesTraitsAndLifetimes\generics\target\debug\generics.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\10.\ genericTypesTraitsAndLifetimes\generics\src\main.rs
