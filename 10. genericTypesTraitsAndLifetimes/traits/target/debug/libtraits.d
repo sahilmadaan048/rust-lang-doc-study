@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\10.\ genericTypesTraitsAndLifetimes\traits\target\debug\libtraits.rlib: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\10.\ genericTypesTraitsAndLifetimes\traits\src\lib.rs
