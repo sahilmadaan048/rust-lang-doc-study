@@ -1,0 +1,74 @@
+### Explanation of the Statement  
+
+In Rust, the `Result` type is **generic**, meaning it can be used to represent different types of success and error values.  
+
+The `Result` enum is defined as:  
+
+```rust
+enum Result<T, E> {
+    Ok(T),  // Represents success and contains a value of type T
+    Err(E), // Represents an error and contains a value of type E
+}
+```
+
+Because `T` (success type) and `E` (error type) are **generic type parameters**, you can use `Result<T, E>` in different situations where `T` and `E` can be **any types you want**.
+
+---
+
+### **Example 1: File Reading (Success: String, Error: io::Error)**  
+```rust
+use std::fs::File;
+use std::io::{self, Read};
+
+fn read_file(path: &str) -> Result<String, io::Error> {
+    let mut file = File::open(path)?; // Returns Result<File, io::Error>
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)?; // Returns Result<usize, io::Error>
+    Ok(contents) // Success case: returning String
+}
+
+fn main() {
+    match read_file("example.txt") {
+        Ok(content) => println!("File contents: {}", content),
+        Err(e) => println!("Error reading file: {:?}", e),
+    }
+}
+```
+**Why `Result<String, io::Error>`?**  
+- If the file is read successfully, it returns `Ok(String)`.  
+- If an error occurs, it returns `Err(io::Error)`.  
+
+---
+
+### **Example 2: Integer Division (Success: i32, Error: String)**
+```rust
+fn safe_divide(a: i32, b: i32) -> Result<i32, String> {
+    if b == 0 {
+        Err("Cannot divide by zero".to_string()) // Error case: String message
+    } else {
+        Ok(a / b) // Success case: i32
+    }
+}
+
+fn main() {
+    match safe_divide(10, 2) {
+        Ok(result) => println!("Result: {}", result),
+        Err(error) => println!("Error: {}", error),
+    }
+}
+```
+**Why `Result<i32, String>`?**  
+- If division is valid, it returns `Ok(i32)`.  
+- If division by zero occurs, it returns `Err(String)`.  
+
+---
+
+### **Key Takeaways**
+1. `Result<T, E>` is generic, meaning **`T` and `E` can be any types**.
+2. This makes `Result` **flexible**, so you can use it in various situations:
+   - File handling (`Result<String, io::Error>`)
+   - Math operations (`Result<i32, String>`)
+   - API calls (`Result<Data, ApiError>`)
+3. The functions **defined on `Result`** (like `.unwrap()`, `.map()`, `.and_then()`) allow easy handling of success and error values.
+
+This generic nature of `Result` makes Rust’s error handling both **type-safe** and **expressive**! 🚀
