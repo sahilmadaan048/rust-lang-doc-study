@@ -13,6 +13,26 @@ mod front_of_house {
         fn take_payment() {}
     }
 }
+//will give error sunce cant access the child modules without using the pub keywoes
+
+
+mod front_of_house {
+    pub mod hosting {
+        fn add_to_waitlist() {}
+    }
+}
+
+pub fn eat_at_restaurant() {
+    // Absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
+
+    // Relative path
+    front_of_house::hosting::add_to_waitlist();
+}
+
+//using the super keyword to reference an item that we know is in the parent midule which can meke
+//reaaranging the module tree easier when the midules is clsoely related to the parent but
+//module might be moved elsewhere in the module tree someday
 
 /*
 
@@ -52,6 +72,59 @@ meaning htey are defined in the ssme module
 hoisting and serving are siblings defined within front_of_house
 id mofule A is contained inside module B, we say that module A is thr child of module B 
 suchh that module B is the parent of moduke A
-Notice that the entire midule tree is rooted under the impplicit module named crate
+Notice that the entire midule tree is rooted under the impplicit module named crate--
 
 */
+
+
+
+//making structs ans enums public
+
+mod back_of_house {
+    pub struct Breakfast {
+        pub toast: String,
+        seasonal_fruit: String,
+    }
+
+    impl Breakfast {
+        pub fn summer(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("peaches"),
+            }
+        }
+    }
+}
+
+pub fn eat_at_restaurant() {
+    // Order a breakfast in the summer with Rye toast
+    let mut meal = back_of_house::Breakfast::summer("Rye");
+    // Change our mind about what bread we'd like
+    meal.toast = String::from("Wheat");
+    println!("I'd like {} toast please", meal.toast);
+
+    // The next line won't compile if we uncomment it; we're not allowed
+    // to see or modify the seasonal fruit that comes with the meal
+    // meal.seasonal_fruit = String::from("blueberries");
+}
+
+
+
+//in the enums
+//enums wouldnt be any useful if there variabmts are private 
+//thus as somm as we use the pub keyword for the struct
+//we can access it svariabnts also wihthout explicitly mentioning the pub keyword for themunlike structs where we have to do so
+
+mod back_of_house {
+    pub enum Appetizer {
+        Soup,
+        Salad,
+    }
+}
+
+pub fn eat_at_restaurant() {
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
+}
+
+//use keyword
