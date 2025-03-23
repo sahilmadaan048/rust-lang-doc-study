@@ -46,7 +46,7 @@ fn main() {
     }
     let mut v4 = vec![100, 32, 57];
     for i in &mut v4 {
-        *i += 50;
+        *i += 50; //dereference and make the vector mutable
     }
     let row = vec![
         SpreadsheetCell::Int(3),
