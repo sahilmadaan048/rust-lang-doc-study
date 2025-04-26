@@ -1,0 +1,1 @@
+E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\18.\ Object\ Oriented\ Programming\ features\ in\ Rust\characteristics\target\debug\characteristics.exe: E:\Code_Everyday\RUST\doc\ study\rust-lang-doc-study\18.\ Object\ Oriented\ Programming\ features\ in\ Rust\characteristics\src\main.rs
