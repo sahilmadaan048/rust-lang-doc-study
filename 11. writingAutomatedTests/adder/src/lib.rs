@@ -198,6 +198,7 @@ fn it_works() -> Result<(), String> {
     } else {
         Err(String::from("two plus two does not equal four"))
     }
+    Ok(())  //never reacjed here so its redundant to write this thin  here
 }
 
 //we cant use #[should_opanic] annotation here o tests that use Result enum
@@ -266,4 +267,4 @@ mod tests {
 }
 
 // run the ignored test case
-cargo test -- --ignored:
+cargo test -- --ignored: 
