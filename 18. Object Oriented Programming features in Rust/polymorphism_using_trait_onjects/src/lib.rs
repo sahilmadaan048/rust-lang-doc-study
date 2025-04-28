@@ -8,15 +8,13 @@ pub trait Draw {
     fn draw(&self);
 }
 
-// pub struct Screen {
-//     pub components: Vec<Box<dyn Draw>>,  //box mark pointer dyn => dynamic dispatch
-
-//     //every component in components implement Draw trait
-// }
+pub struct Screen {
+    pub components: Vec<Box<dyn Draw>>,  // box = smart pointer, dyn = dynamic dispatch
+}
 
 impl Screen {
     pub fn run(&self) {
-        fr component in self.components.iter() {
+        for component in self.components.iter() {
             component.draw();
         }
     }
@@ -30,9 +28,10 @@ pub struct Button {
 
 impl Draw for Button {
     fn draw(&self) {
-        //draw button
+        // code to draw the button
     }
 }
+
 
 //why not use generic implementation
 //while usingn generics we are limited to one componennt
